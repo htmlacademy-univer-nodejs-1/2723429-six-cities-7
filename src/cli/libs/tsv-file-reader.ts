@@ -22,7 +22,7 @@ export class TSVFileReader implements FileReader {
       .split('\n')
       .filter((row) => row.trim().length > 0)
       .map((line) => line.split('\t'))
-      .map(([name, description, date, city, preimage, images, isPremium, isFavourite, rating, houseType, roomsCount, guestsCount, price, conveniences, author, commentsCount, location]) => ({
+      .map(([name, description, date, city, preimage, images, isPremium, isFavourite, rating, houseType, roomsCount, guestsCount, price, conveniences, authorEmail, commentsCount, location]) => ({
         name,
         description,
         date: new Date(date),
@@ -38,7 +38,7 @@ export class TSVFileReader implements FileReader {
         price: Number.parseInt(price, 10),
         conveniences: conveniences.split(',').map((convenience) => isConvenience(convenience.trim())),
         author: {
-          email: 'email',
+          email: authorEmail,
           name: 'Tim',
           type: 'common',
           password: '12345',
