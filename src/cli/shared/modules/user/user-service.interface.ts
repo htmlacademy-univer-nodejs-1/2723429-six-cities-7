@@ -1,6 +1,6 @@
-import { CreateUserDto } from '../dto/index.js';
 import {UserDocument} from './user.model.js';
-import {UpdateUserDto} from '../dto/update-user.dto.js';
+import {UpdateUserDto} from './dto/index.js';
+import {CreateUserDto} from './dto/index.js';
 
 export interface IUserService {
   create(dto: CreateUserDto, salt: string): Promise<UserDocument>;

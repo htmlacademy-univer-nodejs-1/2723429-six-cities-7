@@ -1,4 +1,4 @@
-import {CreateCommentDto} from '../dto/create-comment.dto.js';
+import {CreateCommentDto} from './dto/create-comment.dto.js';
 import {CommentDocument} from './comment.model.js';
 
 export interface ICommentService {

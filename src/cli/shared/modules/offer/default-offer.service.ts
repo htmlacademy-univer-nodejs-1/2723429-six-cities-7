@@ -5,7 +5,7 @@ import { IOfferService } from './offer-service.interface.js';
 import { OfferDocument } from './offer.model.js';
 import {City, Component, SortType} from '../../types/index.js';
 import {ILogger} from '../../logger/index.js';
-import {UpdateOfferDto} from '../dto/update-offer.dto.js';
+import {UpdateOfferDto} from './dto/update-offer.dto.js';
 import {CommentDocument} from '../comment/index.js';
 
 

@@ -1,6 +1,6 @@
-import { CreateOfferDto } from '../dto/index.js';
+import { CreateOfferDto } from './dto/index.js';
 import { OfferDocument } from './offer.model.js';
-import {UpdateOfferDto} from '../dto/update-offer.dto.js';
+import {UpdateOfferDto} from './dto/index.js';
 import {City} from '../../types/index.js';
 
 export interface IOfferService {

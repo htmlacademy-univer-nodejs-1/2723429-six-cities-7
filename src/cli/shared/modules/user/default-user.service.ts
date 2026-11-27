@@ -5,7 +5,7 @@ import {inject, injectable} from 'inversify';
 import {Component} from '../../types/index.js';
 import {Model} from 'mongoose';
 import {ILogger} from '../../logger/index.js';
-import {UpdateUserDto} from '../dto/update-user.dto.js';
+import {UpdateUserDto} from './dto/update-user.dto.js';
 
 @injectable()
 export class DefaultUserService implements IUserService {

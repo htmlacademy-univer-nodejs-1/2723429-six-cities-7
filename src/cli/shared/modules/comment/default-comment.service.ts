@@ -2,7 +2,7 @@ import { inject, injectable } from 'inversify';
 import { ICommentService } from './comment-service.interface.js';
 import { Component } from '../../types/index.js';
 import {CommentDocument} from './comment.model.js';
-import {CreateCommentDto} from '../dto/create-comment.dto.js';
+import {CreateCommentDto} from './dto/create-comment.dto.js';
 import {Model} from 'mongoose';
 import {IOfferService} from '../offer/index.js';
 
