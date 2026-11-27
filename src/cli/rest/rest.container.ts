@@ -4,6 +4,7 @@ import { Component } from '../shared/types/index.js';
 import { ILogger, PinoLogger } from '../shared/logger/index.js';
 import { IConfig, RestConfig, RestSchema } from '../shared/libs/config/index.js';
 import { IDatabaseClient, MongoDatabaseClient } from '../shared/libs/database-client/index.js';
+import {AppExceptionFilter, IExceptionFilter} from '../shared/libs/rest/index.js';
 
 export function createRestApplicationContainer(): ContainerModule {
   return new ContainerModule((options) => {
@@ -11,5 +12,6 @@ export function createRestApplicationContainer(): ContainerModule {
     options.bind<ILogger>(Component.Logger).to(PinoLogger).inSingletonScope();
     options.bind<IConfig<RestSchema>>(Component.Config).to(RestConfig).inSingletonScope();
     options.bind<IDatabaseClient>(Component.DatabaseClient).to(MongoDatabaseClient).inSingletonScope();
+    options.bind<IExceptionFilter>(Component.ExceptionFilter).to(AppExceptionFilter).inSingletonScope();
   });
 }

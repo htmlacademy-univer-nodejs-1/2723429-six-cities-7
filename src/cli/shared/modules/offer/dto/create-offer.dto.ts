@@ -1,4 +1,4 @@
-import { City, HouseType, Convenience, Location } from '../../types/index.js';
+import { City, HouseType, Convenience, Location } from '../../../types/index.js';
 
 export class CreateOfferDto {
   public name: string;
