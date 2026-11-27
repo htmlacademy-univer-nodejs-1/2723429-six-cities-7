@@ -1,11 +1,11 @@
-import { CreateUserDto } from '../dto/index.js';
+import { CreateUserDto } from './dto/index.js';
 import {IUserService} from './user-service.interface.js';
 import {UserDocument} from './user.model.js';
 import {inject, injectable} from 'inversify';
 import {Component} from '../../types/index.js';
 import {Model} from 'mongoose';
 import {ILogger} from '../../logger/index.js';
-import {UpdateUserDto} from '../dto/update-user.dto.js';
+import {UpdateUserDto} from './dto/index.js';
 
 @injectable()
 export class DefaultUserService implements IUserService {
